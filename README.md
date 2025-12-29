@@ -1,4 +1,3 @@
-This README.md content is designed to be visually professional, using structured formatting, clear headings, and technical details from your report to impress recruiters.
 Multifunction Residue Architecture (MRA) Design
 
 Internship Project | R.V.R. & J.C. College of Engineering
