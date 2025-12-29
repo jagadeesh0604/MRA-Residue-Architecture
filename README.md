@@ -9,21 +9,14 @@ The system was developed using Verilog HDL and targeted for Xilinx FPGA platform
 
 🛠 Tech Stack
 Category	Tools / Languages
-HDL	
 
-Verilog
+HDL	:        Verilog
 
-Software	
+Software : 	 Xilinx Vivado (2020.1 or later)
 
-Xilinx Vivado (2020.1 or later)
+Simulation : Vivado Simulator
 
-Simulation	
-
-Vivado Simulator
-
-Hardware Target	
-
-Xilinx Zynq-7000 / Kintex-7 Series
+Hardware Target	: Xilinx Zynq-7000 / Kintex-7 Series
 
 🏗 System Architecture
 
