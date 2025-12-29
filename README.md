@@ -34,12 +34,20 @@ Top Module: Integrates the RNS Core and Shared Memory into a single, unified int
 
 Verification was performed via a custom testbench to ensure the accuracy of the modular arithmetic.
 
-Waveform Analysis
+## Simulation Results
 
-    Note: The image above (from assets/simulation_waveform.png) shows signals changing at expected intervals, confirming the importance of software analysis before hardware deployment.
+[cite_start]The design was verified using the Vivado Simulator to ensure the RTL logic correctly implements the Residue Number System (RNS) arithmetic[cite: 377, 427].
 
-Functional Verification Table: | Operation | Input A | Input B | Expected Result (Mod 16) | Status | | :--- | :--- | :--- | :--- | :--- | | Addition | 3 | 2 | 5 | Pass | | Subtraction | 5 | 3 | 2 | Pass | | Multiplication| 3 | 2 | 6 | Pass |
+![Simulation Waveform](assets/simulation_waveform.png)
 
+### Waveform Analysis:
+* [cite_start]**Clock (clk)**: Toggles every 5 time units as defined in the testbench to drive synchronous operations[cite: 622].
+* [cite_start]**Reset Logic**: The system is initialized with a high `reset` signal before transitioning to low for normal operation[cite: 623].
+* **Arithmetic Verification**:
+    * [cite_start]**Addition**: With $a=3$, $b=2$, and `operation=00`, the `result` output correctly shows **5**[cite: 632].
+    * [cite_start]**Subtraction**: With $a=5$, $b=3$, and `operation=01`, the `result` output correctly shows **2**[cite: 634].
+    * [cite_start]**Multiplication**: With $a=3$, $b=2$, and `operation=10`, the `result` output correctly shows **6**[cite: 635].
+* [cite_start]**Memory Integration**: The `write_enable` signal triggers when a result is ready, storing the RNS output into the `SharedMemory` at the specified `mem_address`[cite: 636, 637].
 🚀 Key Learning Outcomes
 
     Mastered the RTL Design Flow, including design entry, simulation, and synthesis.
