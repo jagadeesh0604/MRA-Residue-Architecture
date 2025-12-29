@@ -38,7 +38,7 @@ Verification was performed via a custom testbench to ensure the accuracy of the 
 
 [cite_start]The design was verified using the Vivado Simulator to ensure the RTL logic correctly implements the Residue Number System (RNS) arithmetic[cite: 377, 427].
 
-![Simulation Waveform](assets/simulation_waveform.png)
+![Simulation Waveform](assets/op.png)
 
 ### Waveform Analysis:
 * [cite_start]**Clock (clk)**: Toggles every 5 time units as defined in the testbench to drive synchronous operations[cite: 622].
