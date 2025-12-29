@@ -1,0 +1,24 @@
+module Top_tb;
+    reg clk, reset, write_enable;
+    reg [3:0] a, b, mem_address;
+    reg [1:0] operation;
+    wire [3:0] result, mem_data_out;
+
+    Top uut (
+        .clk(clk), .reset(reset), .a(a), .b(b), .operation(operation),
+        .mem_address(mem_address), .write_enable(write_enable),
+        .result(result), .mem_data_out(mem_data_out)
+    );
+
+    initial begin
+        clk = 0; reset = 1; #10 reset = 0;
+        // Test Addition [cite: 562]
+        a = 4'b0011; b = 4'b0010; operation = 2'b00; write_enable = 1; mem_address = 4'b0001;
+        #10;
+        // Test Subtraction [cite: 570]
+        a = 4'b0101; b = 4'b0011; operation = 2'b01; mem_address = 4'b0010;
+        #10;
+        $finish;
+    end
+    always #5 clk = ~clk;
+endmodule
